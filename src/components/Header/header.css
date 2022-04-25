@@ -1,0 +1,30 @@
+
+h1{
+    display:flex;
+    justify-content:center;
+    font-size: medium;
+    color:white;
+    background-color: black;
+    height: 50px;
+    font-size:large;
+    padding: 10px;
+}
+.nav-bar{
+    background-color: #5a0b11;
+    overflow: hidden;
+    display: flex;
+    font-size: small;
+}
+
+
+
+.nav-bar a{
+    margin: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+.nav-bar a:hover{
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+}

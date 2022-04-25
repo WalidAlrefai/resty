@@ -1,0 +1,17 @@
+.result{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 230px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #c0bdbf;
+}
