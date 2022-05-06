@@ -36,7 +36,7 @@ function Form(props) {
         <form className="form" onSubmit={handelSubmit}>
             <div className="api">
                 <input className="input" type="text" name="url" placeholder="http://api.url.here" onChange={handelUrl} />
-                <input className="btn" type="submit" value="Go!" />
+                <input className="btn" type="submit" value="Go!" onClick={!props.isloading ? props.handleClick : null} />
             </div>
             <div className="methods">
                 <span className="method" id="GET" onClick={handelMethod} >GET</span>
