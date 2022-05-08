@@ -1,5 +1,5 @@
 .result{
-    margin: 20px 0;
+    margin: 40px 0;
     display: flex;
     .api{
         width: 30%;
@@ -11,8 +11,21 @@
             border: 1px solid #ccc;
             background-color: blue;
             height: 26px;
-            color:white;
+            // color:white;
             border-radius:5px;
+        }
+
+        .map{
+            width: 400px;
+            height: 480px;
+            overflow:auto;
+            padding : 0 0 60px 0;
+            .MM{
+                
+            display: flex;
+            // flex-direction: column
+
+        }
         }
     }
 }

@@ -10,6 +10,7 @@ function Home() {
     const [request, setRequest] = useState({});
     const [header, setHeader] = useState({});
     const [isloading, setLoad] = useState(false);
+    const [method, setMethod] = useState([]);
     function simulateNetworkLoading() {
         return new Promise((resolve) => setTimeout(resolve, 1000));
     }
@@ -23,6 +24,9 @@ function Home() {
         let header = { Header: response.headers }
         setHeader(header);
     }
+    const renderMethod = (e) =>{
+        setMethod(e)
+    }
     const handleClick = () => setLoad(true);
     useEffect(() => {
         if (isloading) {
@@ -33,8 +37,8 @@ function Home() {
     }, [isloading]);
     return (
         <div className="home">
-            <Form handelApi={handelApi} handleClick={handleClick} />
-            <Results data={data} method={request.method} url={request.url} header={header} loading={isloading} />
+            <Form handelApi={handelApi} handleClick={handleClick} renderMethod={renderMethod} />
+            <Results data={data} method={request.method} url={request.url} header={header} loading={isloading} methods ={method} />
         </div>
     )
 }

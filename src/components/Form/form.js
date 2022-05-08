@@ -1,8 +1,9 @@
 import React from "react";
 import "./form.scss";
 import { useState } from "react";
-
+let m =[];
 function Form(props) {
+    
     const [method, setMethod] = useState("GET");
     const [url, setUrl] = useState("");
     const [body, setBody] = useState("");
@@ -30,6 +31,9 @@ function Form(props) {
         if (body) {
             data.body = body;
         }
+        // console.log(data.method);
+        m.push({url:data.url, method:data.method});
+        props.renderMethod(m)
         props.handelApi(data);
     }
     return (
