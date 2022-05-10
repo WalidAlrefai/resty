@@ -28,6 +28,14 @@ function Form(props) {
             url: url,
             body: null
         }
+        let action = {
+            payload :{
+                method: data.method,
+                url: data.url,
+                body: data.body,
+            }
+        }
+        props.addHistory(action);
         if (body) {
             data.body = body;
         }
@@ -35,6 +43,7 @@ function Form(props) {
         m.push({url:data.url, method:data.method});
         props.renderMethod(m)
         props.handelApi(data);
+        
     }
     return (
         <form className="form" onSubmit={handelSubmit}>

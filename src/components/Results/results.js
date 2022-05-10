@@ -9,11 +9,11 @@ function Result(props) {
                     {/* {console.log(props.methods, 'methods11')} */}
                     <div className='map'>
                         {
-                            props.methods.map(e => {
+                            props.state.history.map((e,indx) => {
                                 return (
-                                    <div className="MM">
-                                            <p className="method" style={e.method === "POST" ? { backgroundColor: 'green' } : e.method === "DELETE" ? { backgroundColor: 'red' } : e.method === "PUT" ? { backgroundColor: 'yellow' } : {}}>{e.method}</p>
-                                            <p >{e.url}</p>
+                                    <div className="MM" key={indx}>
+                                            <p className="method" style={e.payload.method === "POST" ? { backgroundColor: 'green' } : e.payload.method === "DELETE" ? { backgroundColor: 'red' } : e.payload.method === "PUT" ? { backgroundColor: 'yellow' } : {}}>{e.payload.method}</p>
+                                            <p >{e.payload.url}</p>
                                     </div>
                                 )
                             })
